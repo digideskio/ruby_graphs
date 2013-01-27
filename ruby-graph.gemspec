@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Ruby::Graph::VERSION
   gem.authors       = ["Martin Madsen"]
   gem.email         = ["martin2madsen@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Create, display and run algorithms on mathematical graphs}
+  gem.summary       = %q{Uses graphviz to create graphs, but allows running algorithms such as BFS on the created graph}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
