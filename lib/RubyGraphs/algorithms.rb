@@ -1,5 +1,5 @@
 module RubyGraphs
-  class Algorithm
+  class Algorithms
     def initialize(graph)
       @g = graph
     end
