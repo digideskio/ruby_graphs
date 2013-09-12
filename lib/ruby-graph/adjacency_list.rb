@@ -1,14 +1,13 @@
 # TODO
 # Make general adjacencylist class and make
 # the directed and undirected versions be specializations of it
-
+module RubyGraph
 class AdjacencyList
   attr_accessor :edgeList, :uedgeList, :vertices, :dirEdgeList
   
   def initialize
     @edgeList = []
     @dirEdgeList = {}
-    @uedgeList = {}
     @vertices = []
     
     @uedgeList = []
@@ -16,7 +15,7 @@ class AdjacencyList
   
   # TODO: Allow options hash with color and shape, see dot language on wiki
   # http://blog.ethanvizitei.com/2010/11/options-hash-classic-ruby-pattern.html  
-  def addEdge(srcVertex, dstVertex, weight)
+  def addEdge(srcVertex, dstVertex, weight = nil)
     #@edgeList << { src: srcVertex, dst: dstVertex, weight: weight }
     
     # Update directed edge list for the source vertex
@@ -48,13 +47,9 @@ class AdjacencyList
       #puts "Working on: #{dirEdgeList[srcVertex]}"
     
       if edge[:dst] == dstVertex
-        #puts "Found #{edge}"
-        
+        #puts "Found #{edge}" 
       end
     end
-    
-    #puts @dirEdgeList[srcVertex].select{|edge| edge[:dst] == dstVertex}
-    
   end
   
   def weightBetween(srcVertex, dstVertex, newWeight = nil)
@@ -66,7 +61,13 @@ class AdjacencyList
         weightList << edge[:weight] unless edge[:weight].nil?
       end
     end
-    return weightList
+    weightList
+  end
+  
+  def degree(vertex)
+    x = 0
+    @uedgeList.each { |edge| x += 1 if edge[:src] == vertex }
+    x
   end
   
   #def [](key)
@@ -75,4 +76,5 @@ class AdjacencyList
   #      return vertex
   #  end
   #end
+end
 end

@@ -47,7 +47,7 @@ graph.addEdge(v2, v3, 9)
 v3.value = 5
 ```
 
-And creating a graph with the display method of the graph class will give you the following graph (done with the 'dot' command):
+And creating a graph with the display method of the graph class will give you the following graph (done with graphviz's 'dot' command):
 
 ![Example graph](http://martinbmadsen.dk/images/posts/graphExample2.png)
 

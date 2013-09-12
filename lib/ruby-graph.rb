@@ -1,6 +1,6 @@
 require "ruby-graph/version"
-require "ruby-graph/adjacencyList"
 require "ruby-graph/vertex"
+require "ruby-graph/adjacency_list" 
 
 module RubyGraph
   class Graph
@@ -10,6 +10,10 @@ module RubyGraph
       # Allows you to populate the graph with an adjacency list
       # or it will make one for you
       @adjList = adjacencyList
+    end
+    
+    def addVertex(value)
+      Vertex.new(value)
     end
 
     def addEdge(srcVertex, dstVertex, weight = nil)
@@ -23,8 +27,12 @@ module RubyGraph
     def weightBetween(srcVertex, dstVertex, newWeight = nil)
       @adjList.weightBetween(srcVertex, dstVertex, newWeight)
     end
+    
+    def degree(vertex)
+      @adjList.degree(vertex)
+    end
   
-    def displayUndirected(fileName = "graph")
+    def displayUndirected(fileName = 'graph')
       File.open(fileName + ".dot", "w") do |f|
         f.puts "graph {"
       
@@ -41,8 +49,8 @@ module RubyGraph
         end
       
         f.puts "}"
-        makePng fileName
       end
+      makePng fileName
     end
   
     def displayDirected(fileName = "graph")
@@ -68,14 +76,12 @@ module RubyGraph
         end
       
         f.puts "}"
-        makePng fileName
       end
+      makePng fileName
     end
-  
-    private
-  
+    
     def makePng(fileName)
-      %x[dot -Tpng "#{fileName}".dot -o "#{fileName}".png]
+      %x[dot -Tpng #{fileName}.dot -o #{fileName}.png]
       # Commented out for cross-platformness
       #%x[rm graph.dot]
       #%x[open graph.png]
