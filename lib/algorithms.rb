@@ -1,4 +1,4 @@
-module RubyGraph
+module RubyGraphs
   class Algorithm
     def initialize(graph)
       @g = graph

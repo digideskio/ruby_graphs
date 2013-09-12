@@ -1,7 +1,7 @@
 # TODO
 # Make general adjacencylist class and make
 # the directed and undirected versions be specializations of it
-module RubyGraph
+module RubyGraphs
 class AdjacencyList
   attr_accessor :edgeList, :uedgeList, :vertices, :dirEdgeList
   

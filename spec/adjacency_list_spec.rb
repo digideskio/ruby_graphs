@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe RubyGraph::AdjacencyList do
+describe RubyGraphs::AdjacencyList do
   before :all do
-    @adjList = RubyGraph::AdjacencyList.new
+    @adjList = RubyGraphs::AdjacencyList.new
     
-    @a = RubyGraph::Vertex.new('a')
-    @b = RubyGraph::Vertex.new('b')
-    @c = RubyGraph::Vertex.new('c')
+    @a = RubyGraphs::Vertex.new('a')
+    @b = RubyGraphs::Vertex.new('b')
+    @c = RubyGraphs::Vertex.new('c')
   end
   
   it "should add edges correctly" do

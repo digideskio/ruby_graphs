@@ -1,8 +1,8 @@
-require "ruby-graph/version"
-require "ruby-graph/vertex"
-require "ruby-graph/adjacency_list" 
+require 'RubyGraphs/version'
+require 'RubyGraphs/vertex'
+require 'RubyGraphs/adjacency_list'
 
-module RubyGraph
+module RubyGraphs
   class Graph
     attr_accessor :adjList
   
