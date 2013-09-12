@@ -12,7 +12,7 @@ module RubyGraph
     def id
       self.object_id
     end
-  
+
     def to_s
       "Node: #{@value}"
     end

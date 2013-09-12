@@ -2,7 +2,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
-  gem.name          = 'RubyGraphs'
+  gem.name          = 'rubyGraphs'
   gem.version       = '0.0.1'
   gem.author        = 'Martin Madsen'
   gem.email         = 'martin2madsen@gmail.com'
