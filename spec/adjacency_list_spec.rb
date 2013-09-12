@@ -9,7 +9,7 @@ describe RubyGraphs::AdjacencyList do
     @c = RubyGraphs::Vertex.new('c')
   end
   
-  it "should add edges correctly" do
+  it 'should add edges correctly' do
     @adjList.addEdge(@a, @b)
     @adjList.dirEdgeList[@a][0][:dst].should eq(@b)
   end

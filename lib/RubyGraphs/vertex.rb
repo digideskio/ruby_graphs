@@ -1,4 +1,4 @@
-module RubyGraph
+module RubyGraphs
   class Vertex
     attr_accessor :value, :d, :p, :color
 
